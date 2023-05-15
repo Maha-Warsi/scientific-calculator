@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scientific Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+  </head>
+  <body>
+   
+<div class="container d-flex justify-content-center align-items-center w-50" style="height: 100vh;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th colspan="4"><input type="text" id="result" class="form-control w-100"></th>
+
+          </tr>
+        </thead>
+        <tbody>
+       
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.sin')">sin</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.cos')">cos</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.tan') ">tan</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.log')">log</button></td>
+            
+      
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.asin')">sin^-1</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.acos')">cos^-1</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.atan') ">tan^-1</button></td>
+            <td><button class="btn btn-dark w-50 text center" onclick="getNum('Math.LN10')">ln</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.sinh')">sinh</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.cosh')">cosh</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.tanh') ">tanh</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.PI')">π</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.abs')">abs</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('Math.ceil')">ceil</button></td>
+            <td><button class="btn btn-dark w-100text-center"  onclick="getNum('%') ">%</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.E')">e</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick=" getNum('Math.round')">round</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick ="getNum('Math.floor')">floor</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('Math.sqrt')" >√</button></td>
+            <td><button class="btn btn-dark w-50 text center" onclick="getNum('Math.pow')">x<sup>y</sup></button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary w-100text-center"onclick="clearNum()" >C</button></td>
+            <td><button class="btn btn-primary w-100text-center" onclick="removeNum()">AC</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getNum('&#40')">(</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick=" getNum('&#41')">)</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('7')">7</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('8')" >8</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('9')" >9</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getNum('/')" >/</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center"onclick=" getNum('4')">4</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('5')">5</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getNum('6')" >6</button></td>
+            <td><button class="btn btn-dark w-100text-center" onclick="getNum('*')" >*</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('1')" >1</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick =" getNum('2')" >2</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('3')" >3</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getNum('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum(',')" >,</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick =" getNum('0')" >0</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('.')" >.</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getNum('-')">-</button></td>
+        </tr>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('Math.random')">rndm</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick =" getNum('00')" >00</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick = "getNum('Math.sign')">sign</button></td>
+            <td><button class="btn btn-dark w-100text-center"onclick="getResult('=')">=</button></td>
+        
+        </tbody>
+      </table>
+
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </body>
+</html>
